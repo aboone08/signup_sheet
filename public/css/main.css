@@ -1,15 +1,48 @@
-body {
-  background-image: url(https://pixabay.com/static/uploads/photo/2014/06/21/14/54/rose-373790_960_720.jpg);
+
+#header {
+  background-color: #adcca8;
+  border-color: #f7f7f7;
+  border-radius: 2em;
+  border-style: ridge;
+  text-align: center;
+}
+
+h1 {
+  color: inherit;
+  font-family: cursive;
 }
 
 .no-dot {
 list-style: none;
+background-color: inherit;
+border: none;
 }
 
 #panel {
-  background-color: lime;
+  background-color: #adcca8;
+  border: 1em;
+  /*border-color: #003300;*/
+  position: center;
 }
 
 #output {
   background-color: #adcca8;
+  border-style: inset;
+}
+
+#btnS {
+  margin-left: 450px;
+  background-color: #FFCCCC;
+  border-color: #FFCCCC;
+}
+
+#instructions {
+  padding-left: 80px;
+}
+
+
+#checkbox {
+  padding-left: 80px;
+  padd
+/*align-items: center;*/
 }
