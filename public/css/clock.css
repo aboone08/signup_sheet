@@ -2,7 +2,7 @@ body{
 	text-align: center;
 	background-image: url(https://pixabay.com/static/uploads/photo/2014/06/21/14/54/rose-373790_960_720.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 120%;
   font-family: sans-serif;
   font-weight: 100;
 }
