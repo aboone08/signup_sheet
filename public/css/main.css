@@ -1,3 +1,7 @@
+input[type=text]:focus {
+  background-color: #FFCCCC;
+  border: 3px solid #9DE093;
+}
 
 #header {
   background-color: #adcca8;
@@ -21,28 +25,21 @@ border: none;
 #panel {
   background-color: #adcca8;
   border: 1em;
-  /*border-color: #003300;*/
   position: center;
-}
-
-#output {
-  background-color: #adcca8;
-  border-style: inset;
 }
 
 #btnS {
-  margin-top: 15px;
-  background-color: #FFCCCC;
+  background-color: #FF91A4;
   border-color: #FFCCCC;
   position: center;
+  margin-bottom: 20px;
 }
 
 #instructions {
-  padding-left: 80px;
+  align-items: center;
 }
 
 
 #checkbox {
-  padding-left: 80px;
   align-items: center;
 }

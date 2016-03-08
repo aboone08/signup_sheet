@@ -57,9 +57,8 @@
           </div>
           <div class="alert alert-success" id="instructions">
             <h5><u>If required, please check day(s) applicable:</h5></u>
-          </div>
   <!--beginning of checkboxes-->
-          <div class="checkbox" ng-model="checkbox" id="checkbox">
+          <div class="form" ng-model="checkbox" id="checkbox">
             <label>
               <input type="checkbox" ng-model="checkbox.Su">Su
             </label>
@@ -79,13 +78,16 @@
               <input type="checkbox" ng-model="checkbox.F">F
             </label>
             <label>
-              <input type="checkbox" ng-model="checkbox.Sa" ng-true-value="'YES'" ng-false-value="'NO'" ng-change="checkbox">Sa
+              <input type="checkbox" ng-model="checkbox.Sa" ng-change="checkbox">Sa
             </label>
           </div>
-  <!--end of checkboxes-->
           </div>
-            <button class="btn btn-primary btn-lg" id="btnS"
-               ng-click='saveEntry()' type="button">Save!</button>
+
+  <!--end of checkboxes-->
+              <button class="btn btn-primary btn-lg" id="btnS" ng-click='saveEntry()'
+                  ng-save="entries in panel" type="button">Save!</button>
+          </div>
+      </div>
       </div>
             <table class="table table-striped">
              <thead>
@@ -99,7 +101,7 @@
                <tr ng-save="entries in panel" ng-click="saveEntry()">
                  <td>{{memberName}}</td>
                  <td>{{itemEntered}}</td>
-                 <td>{{checkboxData}}</td>
+                 <td>{{checkbox}}</td>
                </tr>
              </tbody>
             </table>
@@ -108,8 +110,8 @@
                   <div class="col-md-6 col-sm-12">
                     <ul>
                     <li class='well no-dot' ng-repeat="entries in panel"> {{memberName}} {{itemEntered}} {{checkbox}}
-                      <span><button class="btn btn-info btn-sm" ng-click='editItem()' id="btnE">Edit</button></span>
-                      <span><button class="btn btn-danger btn-sm" ng-click='removeItem()' id="btnX">X</button></span>
+                      <span><button class="btn btn-info btn-sm" ng-click='entryEdit()' id="btnE">Edit</button></span>
+                      <span><button class="btn btn-danger btn-sm" ng-click='removeEntry()' id="btnX">X</button></span>
                     </li>
                     </ul>
                   </div>

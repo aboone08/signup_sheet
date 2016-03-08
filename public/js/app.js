@@ -2,33 +2,28 @@ var app = angular.module('ng_signUp', []);
 
 app.controller('EntryController', function($scope){
   // var data = memberName + itemEntered + checkbox
-  return[
-    {'memberName': 'Sister Ivy', 'item': "food", "checkboxData": "day"},
 
-
-
-
-  $scope.entry = ['entry'];
-  ];
-  $scope.entryData = null;
-  $scope.entryCopy = null;
+  $scope.entry = [''];
+  $scope.entryList = [''];
+  $scope.entryData = [''];
+  // $scope.entryCopy = null;
   $scope.checkbox = false;
 
 
-  $scope.saveEntry = function(entry){
+  $scope.saveEntry = function(){
     var entryInfo = $scope.entryData;
-    $scope.entry.push(entryInfo);
+    $scope.entryList.push(entryInfo);
     $scope.entryData = "";
   }
 
-  $scope.removeEntry = function(entry){
-    var position = $scope.entry.indexOf(entry);
-    $scope.entry.splice(position, 1);
+  $scope.removeEntry = function(singleEntry){
+    var position = $scope.entryList.indexOf(singleEntry);
+    $scope.entryList.splice(position, 1);
   }
 
   $scope.entryEdit = function(entry){
-    var index = $scope.entry.indexOf(entry);
-    $scope.entry.splice(index,1,$scope.entry);
+    var index = $scope.entryList.indexOf(singleEntry);
+    $scope.entryList.splice(index,1,$scope.entry);
     $scope.entryData = '';
   }
 
