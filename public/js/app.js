@@ -8,32 +8,26 @@ app.controller('EntryController', function($scope){
 
 
   $scope.entry = 'entry';
-  $scope.selectedEntry = null;
+  $scope.entryData = null;
   $scope.entryCopy = null;
   $scope.checkbox = false;
 
-  // $scope.selectedEntry = function(entry){
-  //   $scope.selectedEntry = entry;
-  //   $scope.entryCopy = angular.copy(entry);
-  // }
 
   $scope.saveEntry = function(entry){
-    $scope.selectedEntry.data = $scope.entryCopy.data;
+    var entryInfo = $scope.entryData;
+    $scope.entry.push(entry);
+    $scope.entryData = "";
   }
 
-  // $scope.submitForm = function(entry){
-  //   $scope.data.push(entry);
-  //   $scope.entry = {};
-  // }
-
   $scope.removeEntry = function(entry){
-    var position = $scope.selectedEntry.indexOf(entry);
-    $scope.selectedEntry.splice(position, 1);
+    var position = $scope.entry.indexOf(entry);
+    $scope.entry.splice(position, 1);
   }
 
   $scope.entryEdit = function(entry){
-    $scope.entry = entry;
-    $scope.removeEntry(entry);
+    var index = $scope.entry.indexOf(entry);
+    $scope.entry.splice(index,1,$scope.entry);
+    $scope.entry = '';
   }
 
 });

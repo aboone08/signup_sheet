@@ -31,9 +31,10 @@ border: none;
 }
 
 #btnS {
-  margin-left: 450px;
+  margin-top: 15px;
   background-color: #FFCCCC;
   border-color: #FFCCCC;
+  position: center;
 }
 
 #instructions {
